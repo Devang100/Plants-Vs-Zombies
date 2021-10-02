@@ -21,7 +21,7 @@ var p1_img,p2_img;
 var pea1Group;
 var invisline;
 var zombie,zombie_anime,zombieGroup;
-var bgSound;
+//var bgSound;
 var PLAY = 1;
 var END = 0;
 var gameState = PLAY;
@@ -45,7 +45,7 @@ function preload(){
   bl_img = loadImage("images/br.jpg");
   p1_img = loadImage("images/pea.png");
   zombie_anime = loadAnimation("zimage/1.png","zimage/2.png","zimage/3.png","zimage/4.png","zimage/5.png","zimage/6.png","zimage/7.png","zimage/8.png");
-  bgSound = loadSound("bgm.mp3");
+  //bgSound = loadSound("bgm.mp3");
 
 
 
@@ -260,7 +260,7 @@ function spawnZombies(){
     zombie.addAnimation("animation",zombie_anime);
     zombie.y = Math.round(random(110,380))
 
-    bgSound.play();
+   // bgSound.play();
     
     zombie.velocityX = -2;
     zombie.scale=0.8;
@@ -272,7 +272,7 @@ function spawnZombies(){
     
     }
 }
-function mousePressed(){
+/*function mousePressed(){
     plant2.x = mouseX;
     plant2.y = mouseY;
     
@@ -282,7 +282,7 @@ function mouseReleased(){
     plant2.y = 350;
   }
 
-/*function mouseDragged(){
+function mouseDragged(){
 
   if(gameState===PLAY){
      if(mousePressedOver(card2)){
